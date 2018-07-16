@@ -1,0 +1,22 @@
+{
+  "name": "layout-produtos-prodepa",
+  "version": "1.0.0",
+  "description": "Layout base para os produtos da prodepa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppfmagno/layout-produtos-prodepa.git"
+  },
+  "author": "ppfmagno",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ppfmagno/layout-produtos-prodepa/issues"
+  },
+  "homepage": "https://github.com/ppfmagno/layout-produtos-prodepa#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}

@@ -1,0 +1,68 @@
+body {
+  font-family: 'Roboto'; }
+
+a {
+  text-decoration: none;
+  transition: color .2s; }
+
+.top-nav {
+  background: #ececec;
+  display: flex;
+  align-items: center; }
+  .top-nav h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.5rem; }
+    .top-nav h1 em {
+      font-weight: 700;
+      font-style: normal; }
+  .top-nav a {
+    display: block;
+    padding: 7.5px 20px;
+    color: #555; }
+    .top-nav a:hover {
+      color: #32338e; }
+  .top-nav ul {
+    display: none;
+    list-style: none;
+    text-align: right;
+    margin: 0; }
+    @media print, screen and (min-width: 64em) {
+      .top-nav ul {
+        display: block; } }
+    .top-nav ul li {
+      display: inline-block; }
+      .top-nav ul li:last-child {
+        padding-right: 10px; }
+
+.hero {
+  min-height: 450px;
+  background: #32338e; }
+
+.details-nav {
+  background-color: #cacaca; }
+  .details-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    list-style: none; }
+    .details-nav ul li {
+      transition: background-color .2s;
+      border-right: 1px solid #868686;
+      border-left: 1px solid #868686; }
+      .details-nav ul li:first-child {
+        border-left: none; }
+      .details-nav ul li:last-child {
+        border-right: none; }
+      .details-nav ul li.selected, .details-nav ul li:hover {
+        background-color: #868686; }
+        .details-nav ul li.selected a, .details-nav ul li:hover a {
+          color: #fff; }
+      .details-nav ul li a {
+        color: #555;
+        display: block;
+        padding: 7.5px 20px; }
+
+.details-section {
+  min-height: 200px;
+  background-color: #868686; }

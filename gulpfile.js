@@ -9,7 +9,7 @@ const concat = require('gulp-concat');
 
 const paths = {
     templates: {
-        src: 'src/templates/*.ejs',
+        src: 'src/templates/**/*.ejs',
         dest: './dist'
     },
     styles: {

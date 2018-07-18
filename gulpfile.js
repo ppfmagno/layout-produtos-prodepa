@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const ejs = require('gulp-ejs');
 const flatmap = require('gulp-flatmap');
+const imagemin = require('gulp-imagemin');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
@@ -9,8 +10,12 @@ const concat = require('gulp-concat');
 
 const paths = {
     templates: {
-        src: 'src/templates/**/*.ejs',
+        src: ['src/templates/**/*.ejs', '!src/templates/partials/**/*.ejs'],
         dest: './dist'
+    },
+    images: {
+        src: ['src/img/**/*', '!src/img/raw/**/*'],
+        dest: 'dist/img'
     },
     styles: {
         src: 'src/scss/**/*.scss',
@@ -40,6 +45,13 @@ function templates() {
         .pipe(gulp.dest(paths.templates.dest));
 }
 
+function images() {
+    return gulp.src(paths.images.src)
+        .pipe(imagemin())
+        .pipe(gulp.dest(paths.images.dest))
+        .pipe(browserSync.stream());;
+}
+
 function styles() {
     return gulp.src(paths.styles.src)
         .pipe(sass().on('error', sass.logError))
@@ -56,18 +68,20 @@ function scripts() {
 }
 
 function watch() {
-    gulp.watch(paths.templates.src, templates);
+    gulp.watch(paths.templates.src[0], templates);
+    gulp.watch(paths.images.src, images);
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.scripts.src, scripts);
 }
 
 exports.templates = templates;
+exports.images = images;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watch = watch;
 exports.serve = serve;
 
-const build = gulp.series(gulp.parallel(templates, styles));
+const build = gulp.series(gulp.parallel(templates, images, styles, scripts));
 
 gulp.task('build', build);
 

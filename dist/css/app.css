@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto'; }
+  font-family: 'Roboto', sans-serif; }
 
 a {
   text-decoration: none;
@@ -14,7 +14,7 @@ a {
     font-weight: 400;
     font-size: 1.5rem; }
     .top-nav h1 em {
-      font-weight: 700;
+      font-weight: 700 !important;
       font-style: normal; }
   .top-nav a {
     display: block;
@@ -36,28 +36,27 @@ a {
         padding-right: 10px; }
 
 .hero {
-  min-height: 450px;
-  background: #32338e; }
+  min-height: 400px;
+  background: #32338e url("../img/datacenter-bg.jpg") center left/cover; }
 
 .details-nav {
-  background-color: #cacaca; }
+  background-color: #ececec; }
   .details-nav ul {
-    display: flex;
-    flex-wrap: wrap;
     margin: 0;
+    padding: 0;
     list-style: none; }
     .details-nav ul li {
-      transition: background-color .2s;
-      border-right: 1px solid #868686;
-      border-left: 1px solid #868686; }
-      .details-nav ul li:first-child {
-        border-left: none; }
-      .details-nav ul li:last-child {
-        border-right: none; }
+      display: block;
+      border-bottom: solid 5px transparent;
+      text-align: center; }
+      @media print, screen and (min-width: 40em) {
+        .details-nav ul li {
+          text-align: left;
+          display: inline-block; } }
       .details-nav ul li.selected, .details-nav ul li:hover {
-        background-color: #868686; }
+        border-bottom: solid 5px #cecece; }
         .details-nav ul li.selected a, .details-nav ul li:hover a {
-          color: #fff; }
+          color: #32338e; }
       .details-nav ul li a {
         color: #555;
         display: block;
@@ -65,4 +64,16 @@ a {
 
 .details-section {
   min-height: 200px;
-  background-color: #868686; }
+  background-color: #cecece;
+  color: #555; }
+  .details-section .cell {
+    margin: 20px 0; }
+  .details-section h1 {
+    text-align: center;
+    color: #32338e;
+    font-size: 2rem;
+    font-weight: 400; }
+    @media print, screen and (min-width: 64em) {
+      .details-section h1 {
+        text-align: left;
+        font-size: 2.75rem; } }

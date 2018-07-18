@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -29,7 +29,7 @@ a {
         font-weight: 400;
         font-size: 1.5rem;
         em { 
-            font-weight: 700;
+            font-weight: 700 !important;
             font-style: normal;
         }
     }    
@@ -59,33 +59,35 @@ a {
 }
 
 .hero {
-    min-height: 450px;
-    background: #32338e;
+    min-height: 400px;
+    background: #32338e url('../img/datacenter-bg.jpg') center left / cover;
 }
 
+// $details-bg: #646464 + #222;
+$details-bg: #cecece;
+
 .details-nav {
-    background-color: #646464 + #666;
+    background-color: #ececec;
     
     ul {
-        display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         margin: 0;
+        padding: 0;
         list-style: none;
         
-        li { 
-            transition: background-color .2s;
-            border-right: 1px solid #646464 + #222;
-            border-left: 1px solid #646464 + #222;
-            &:first-child {
-                border-left: none;
-            }
-            &:last-child {
-                border-right: none;
+        li {
+            display: block;
+            border-bottom: solid 5px transparent;
+            text-align: center;
+
+            @include md-up() {
+                text-align: left;
+                display: inline-block;
             }
             
             &.selected, &:hover {
-                background-color: #646464 + #222;
-                & a { color: #fff; }
+                border-bottom: solid 5px $details-bg;
+                & a { color: #32338e; }
             }
             
             a {
@@ -99,5 +101,22 @@ a {
 
 .details-section {
     min-height: 200px;
-    background-color: #646464 + #222;
+    background-color: $details-bg;
+    color: #555;
+    
+    .cell {
+        margin: 20px 0;
+    }
+
+    h1 {
+        text-align: center;
+        color: #32338e;
+        font-size: 2rem;
+        font-weight: 400;
+
+        @include lg-up() {
+            text-align: left;
+            font-size: 2.75rem;
+        }
+    }
 }

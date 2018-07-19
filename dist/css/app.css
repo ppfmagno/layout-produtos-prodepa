@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
 
 a {
   text-decoration: none;
@@ -22,39 +22,81 @@ a {
     color: #555; }
     .top-nav a:hover {
       color: #32338e; }
+    @media print, screen and (min-width: 64em) {
+      .top-nav a {
+        padding: 7.5px 20px; } }
+  .top-nav .menu-icon {
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    font-style: normal;
+    right: 0;
+    top: -18.5px;
+    padding: 20px;
+    color: #555;
+    font-size: 2rem; }
+    @media print, screen and (min-width: 64em) {
+      .top-nav .menu-icon {
+        display: none; } }
   .top-nav ul {
-    display: none;
+    background-color: #ececec;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
     list-style: none;
-    text-align: right;
-    margin: 0; }
+    text-align: left;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    transition: width .2s; }
+    .top-nav ul a {
+      padding: 15px; }
     @media print, screen and (min-width: 64em) {
       .top-nav ul {
-        display: block; } }
+        text-align: right;
+        position: relative;
+        width: initial !important;
+        height: initial; }
+        .top-nav ul a {
+          padding: 7.5px 20px; } }
     .top-nav ul li {
-      display: inline-block; }
-      .top-nav ul li:last-child {
-        padding-right: 10px; }
+      display: block;
+      border-bottom: 2px solid #ccc; }
+      @media print, screen and (min-width: 64em) {
+        .top-nav ul li {
+          display: inline-block;
+          border: none; }
+          .top-nav ul li:last-child {
+            padding-right: 10px; } }
 
 .hero {
   min-height: 400px;
-  background: #32338e url("../img/datacenter-bg.jpg") center left/cover; }
+  background: #32338e url("../img/datacenter-bg.jpg") center right/cover; }
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #fff; }
 
 .details-nav {
-  background-color: #ececec; }
+  background-color: #cecece; }
   .details-nav ul {
     margin: 0;
     padding: 0;
     list-style: none; }
     .details-nav ul li {
       display: block;
-      border-bottom: solid 5px transparent;
+      background: transparent;
       text-align: center; }
       @media print, screen and (min-width: 40em) {
         .details-nav ul li {
           text-align: left;
           display: inline-block; } }
       .details-nav ul li.selected, .details-nav ul li:hover {
-        border-bottom: solid 5px #cecece; }
+        background: #ececec; }
         .details-nav ul li.selected a, .details-nav ul li:hover a {
           color: #32338e; }
       .details-nav ul li a {
@@ -64,16 +106,29 @@ a {
 
 .details-section {
   min-height: 200px;
-  background-color: #cecece;
-  color: #555; }
-  .details-section .cell {
-    margin: 20px 0; }
+  padding: 35px 0;
+  background-color: #ececec;
+  color: #555;
+  text-align: center; }
+  .details-section:not(#destaques) {
+    display: none; }
+  @media print, screen and (min-width: 40em) {
+    .details-section {
+      text-align: left; } }
+  .details-section .details-content {
+    align-items: center; }
   .details-section h1 {
-    text-align: center;
+    margin: 0;
     color: #32338e;
     font-size: 2rem;
     font-weight: 400; }
     @media print, screen and (min-width: 64em) {
       .details-section h1 {
-        text-align: left;
         font-size: 2.75rem; } }
+  .details-section .product-icon {
+    color: #F53A5C;
+    text-align: center; }
+
+.advantages-section {
+  min-height: 1200px;
+  background: #F53A5C; }

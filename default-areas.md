@@ -22,3 +22,12 @@ principais clientes que já usam o produto
 #Produtos relacionados
 
 #Área/link de contato para mais informações
+
+Colors
+http://paletton.com/#uid=c3+0I5t3b0kopptfDudb5PD++H+B9sK
+
+32338E
+F53A5C
+FF9130
+FEDD55
+01DEBC

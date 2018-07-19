@@ -57,14 +57,15 @@ function styles() {
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(paths.styles.dest))
         .pipe(browserSync.stream());
-}
-
-function scripts() {
-    return gulp.src(paths.templates.src)
+    }
+    
+    function scripts() {
+        return gulp.src(paths.scripts.src)
         .pipe(babel())
         .pipe(uglify())
         .pipe(concat('app.min.js'))
-        .pipe(gulp.dest(paths.scripts.dest));
+        .pipe(gulp.dest(paths.scripts.dest))
+        .pipe(browserSync.stream());
 }
 
 function watch() {

@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -39,45 +39,94 @@ a {
         padding: 7.5px 20px;
         color: #555;
         &:hover { color: #32338e; }
+        @include lg-up() {
+            padding: 7.5px 20px;
+        }
+        
+    }
+    
+    .menu-icon {
+        position: absolute;
+        z-index: 100;
+        cursor: pointer;
+        font-style: normal;
+        right: 0;
+        top: -18.5px;
+        padding: 20px;
+        color: #555;
+        font-size: 2rem;
+        @include lg-up() {
+            display: none;
+        }
     }
     
     ul {
-        display: none;
+        background-color: #ececec;
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
         list-style: none;
-        text-align: right;
+        text-align: left;
+        white-space: nowrap;
         margin: 0;
+        padding: 0;
+        width: 0;
+        height: 100vh;
+        overflow-x: hidden;
+        transition: width .2s;
+        
+        a {
+            padding: 15px;
+        }
         
         @include lg-up(){
-            display: block;
+            text-align: right;
+            position: relative;
+            width: initial !important;
+            height: initial;
+            a {
+                padding: 7.5px 20px;
+            }
         }
 
         li {
-            display: inline-block;
-            &:last-child { padding-right: 10px; }
+            display: block;
+            border-bottom: 2px solid #ccc;
+            @include lg-up() {
+                display: inline-block;
+                border: none;
+                &:last-child { padding-right: 10px; }
+            }
         }
     }
 }
 
 .hero {
     min-height: 400px;
-    background: #32338e url('../img/datacenter-bg.jpg') center left / cover;
+    background: #32338e url('../img/datacenter-bg.jpg') center right / cover;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 300;
+        color: #fff;
+    }
 }
 
 // $details-bg: #646464 + #222;
-$details-bg: #cecece;
+$details-bg: #ececec;
 
 .details-nav {
-    background-color: #ececec;
+    background-color: #cecece;
     
     ul {
-        // flex-wrap: wrap;
         margin: 0;
         padding: 0;
         list-style: none;
         
         li {
             display: block;
-            border-bottom: solid 5px transparent;
+            background: transparent;
             text-align: center;
 
             @include md-up() {
@@ -86,7 +135,7 @@ $details-bg: #cecece;
             }
             
             &.selected, &:hover {
-                border-bottom: solid 5px $details-bg;
+                background: $details-bg;
                 & a { color: #32338e; }
             }
             
@@ -101,22 +150,41 @@ $details-bg: #cecece;
 
 .details-section {
     min-height: 200px;
+    padding: 35px 0;
     background-color: $details-bg;
     color: #555;
+    text-align: center;
+
+    &:not(#destaques) {
+        display: none;
+    }
     
-    .cell {
-        margin: 20px 0;
+    @include md-up() {
+        text-align: left;
+    }
+
+    .details-content {
+        align-items: center;
     }
 
     h1 {
-        text-align: center;
+        margin: 0;
         color: #32338e;
         font-size: 2rem;
         font-weight: 400;
 
         @include lg-up() {
-            text-align: left;
             font-size: 2.75rem;
         }
     }
+
+    .product-icon {
+        color: #F53A5C;
+        text-align: center;
+    }
+}
+
+.advantages-section {
+    min-height: 1200px;
+    background: #F53A5C;
 }

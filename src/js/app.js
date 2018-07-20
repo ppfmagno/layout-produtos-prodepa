@@ -34,9 +34,6 @@ detailsNav.click( (e) => {
 
     detailsNav.each(function() {
         let selected = $(this).attr('href');
-        console.log(selected);
-        console.log(href);
-        console.log($(this).parent());
         
         if (selected === href) {
             $(this).parent().addClass('selected');

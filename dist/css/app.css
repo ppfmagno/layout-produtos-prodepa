@@ -13,6 +13,7 @@ a {
   color: #32338e;
   font-weight: 700;
   font-size: .85rem;
+  line-height: 1.5;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px; }
   .button:hover {
@@ -168,24 +169,42 @@ a {
       text-align: left; } }
   .details-section .details-content {
     align-items: center; }
-  .details-section h1 {
+  .details-section h2 {
     margin: 0;
     color: #32338e;
     font-size: 1.75rem;
     font-weight: 400; }
     @media print, screen and (min-width: 40em) {
-      .details-section h1 {
+      .details-section h2 {
         font-size: 2.25rem; } }
     @media print, screen and (min-width: 64em) {
-      .details-section h1 {
+      .details-section h2 {
         font-size: 2.75rem; } }
   .details-section .product-icon {
     text-align: center; }
   .details-section ul {
     padding: 0;
-    columns: 2;
     list-style-position: inside; }
+    @media print, screen and (min-width: 40em) {
+      .details-section ul {
+        columns: 2; } }
+  .details-section input, .details-section textarea {
+    border-radius: 5px;
+    border: none;
+    margin: 7.5px 0 10px;
+    padding: 5px;
+    resize: vertical;
+    display: block;
+    width: 100%;
+    transition: box-shadow .2s; }
+    .details-section input:focus, .details-section textarea:focus {
+      outline: none;
+      box-shadow: rgba(50, 51, 142, 0.25) 0 0 0 3.5px; }
 
 .advantages-section {
   min-height: 200px;
   background: #F53A5C; }
+
+.page-footer {
+  background: #cecece;
+  min-height: 75px; }

@@ -27,6 +27,7 @@ a {
     color: #32338e;
     font-weight: 700;
     font-size: .85rem; 
+    line-height: 1.5;
     border-radius: 5px;
     box-shadow: rgba(0,0,0,.25) 0 0 10px;
     &:hover {
@@ -229,7 +230,7 @@ $details-bg: #ececec;
         align-items: center;
     }
 
-    h1 {
+    h2 {
         margin: 0;
         color: #32338e;
         font-size: 1.75rem;
@@ -250,12 +251,34 @@ $details-bg: #ececec;
 
     ul {
         padding: 0;
-        columns: 2;
         list-style-position: inside;
+        @include md-up() {
+            columns: 2;
+        }
+    }
+
+    input, textarea {
+        border-radius: 5px;
+        border: none;
+        margin: 7.5px 0 10px;
+        padding: 5px;
+        resize: vertical;
+        display: block;
+        width: 100%;
+        transition: box-shadow .2s;
+        &:focus {
+            outline: none;
+            box-shadow: transparentize(#32338e, .75) 0 0 0 3.5px;
+        }
     }
 }
 
 .advantages-section {
     min-height: 200px;
     background: #F53A5C;
+}
+
+.page-footer {
+    background: #cecece;
+    min-height: 75px;
 }

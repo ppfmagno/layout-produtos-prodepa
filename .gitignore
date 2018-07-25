@@ -1,3 +1,5 @@
 node_modules/*
 node_modules/
+info_produtos/*
+info_produtos/
 .vscode

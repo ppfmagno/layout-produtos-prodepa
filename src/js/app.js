@@ -17,12 +17,12 @@ menuIcon.click( () => {
     }
 });
 
-let detailsNav = $('.details-nav a');
+let detailsNav = $('.about-nav a');
 detailsNav.click( (e) => {
     e.preventDefault();
     let href = $(e.target).attr('href'),
         tabId = href.substr(1),
-        tabs = $('section.details-section');
+        tabs = $('section.about-section');
         
     tabs.each(function() {            
         if ($(this).attr('id') == tabId) {

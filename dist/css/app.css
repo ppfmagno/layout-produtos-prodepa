@@ -112,9 +112,13 @@ a {
     margin: 15px 0;
     font-weight: 300;
     font-style: italic;
-    font-size: 4rem;
-    line-height: 4.5rem;
+    font-size: 2.75rem;
+    line-height: 3.25rem;
     color: #fff; }
+    @media print, screen and (min-width: 40em) {
+      .hero h1 {
+        font-size: 3.75rem;
+        line-height: 4.25rem; } }
   .hero .hero-orb {
     margin: 0 auto;
     overflow: hidden;
@@ -130,65 +134,66 @@ a {
     .hero .hero-text {
       margin-left: 30px; } }
 
-.details-nav {
+.about-nav {
   background-color: #cecece;
   overflow-x: hidden; }
-  .details-nav ul {
+  .about-nav ul {
     margin: 0;
     padding: 0;
     list-style: none; }
-    .details-nav ul li {
+    .about-nav ul li {
       display: block;
       background: transparent;
       text-align: center;
       margin: 0 -20px; }
       @media print, screen and (min-width: 40em) {
-        .details-nav ul li {
+        .about-nav ul li {
           margin: initial;
           text-align: left;
           display: inline-block; } }
-      .details-nav ul li.selected, .details-nav ul li:hover {
+      .about-nav ul li.selected, .about-nav ul li:hover {
         background: #ececec; }
-        .details-nav ul li.selected a, .details-nav ul li:hover a {
+        .about-nav ul li.selected a, .about-nav ul li:hover a {
           color: #32338e; }
-      .details-nav ul li a {
+      .about-nav ul li a {
         color: #555;
         display: block;
         padding: 7.5px 20px; }
 
-.details-section {
+.about-section {
   min-height: 200px;
   padding: 35px 0;
   background-color: #ececec;
   color: #555;
   text-align: center; }
-  .details-section:not(#destaques) {
-    display: none; }
   @media print, screen and (min-width: 40em) {
-    .details-section {
+    .about-section {
       text-align: left; } }
-  .details-section .details-content {
+  .about-section:not(#destaques) {
+    display: none; }
+  .about-section .highlights {
     align-items: center; }
-  .details-section h2 {
-    margin: 0;
+  .about-section h2 {
+    margin: 0 0 20px;
     color: #32338e;
-    font-size: 1.75rem;
-    font-weight: 400; }
+    font-size: 1.5rem;
+    font-weight: 300; }
     @media print, screen and (min-width: 40em) {
-      .details-section h2 {
-        font-size: 2.25rem; } }
+      .about-section h2 {
+        margin-right: 25px;
+        font-size: 1.75rem; } }
     @media print, screen and (min-width: 64em) {
-      .details-section h2 {
-        font-size: 2.75rem; } }
-  .details-section .product-icon {
+      .about-section h2 {
+        font-size: 2.25rem; } }
+  .about-section .product-icon {
     text-align: center; }
-  .details-section ul {
+  .about-section ul {
     padding: 0;
     list-style-position: inside; }
     @media print, screen and (min-width: 40em) {
-      .details-section ul {
+      .about-section ul {
         columns: 2; } }
-  .details-section input, .details-section textarea {
+  .about-section input, .about-section textarea {
     border-radius: 5px;
     border: none;
     margin: 7.5px 0 10px;
@@ -197,13 +202,14 @@ a {
     display: block;
     width: 100%;
     transition: box-shadow .2s; }
-    .details-section input:focus, .details-section textarea:focus {
+    .about-section input:focus, .about-section textarea:focus {
       outline: none;
       box-shadow: rgba(50, 51, 142, 0.25) 0 0 0 3.5px; }
 
 .advantages-section {
   min-height: 200px;
-  background: #F53A5C; }
+  background: #F53A5C;
+  color: #fff; }
 
 .page-footer {
   background: #cecece;

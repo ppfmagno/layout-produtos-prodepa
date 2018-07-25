@@ -57,6 +57,7 @@ a {
         margin: 0;
         font-weight: 400;
         font-size: 1.5rem;
+
         em { 
             font-weight: 700 !important;
             font-style: normal;
@@ -71,7 +72,6 @@ a {
         @include lg-up() {
             padding: 7.5px 20px;
         }
-        
     }
     
     .menu-icon {
@@ -150,9 +150,13 @@ a {
         margin: 15px 0;
         font-weight: 300;
         font-style: italic;
-        font-size: 4rem;
-        line-height: 4.5rem;
+        font-size: 2.75rem;
+        line-height: 3.25rem;
         color: #fff;
+        @include md-up() {
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+        }
     }
 
     .hero-orb {
@@ -174,9 +178,9 @@ a {
     }
 }
 
-$details-bg: #ececec;
+$about-bg: #ececec;
 
-.details-nav {
+.about-nav {
     background-color: #cecece;
     overflow-x: hidden;
     
@@ -190,7 +194,6 @@ $details-bg: #ececec;
             background: transparent;
             text-align: center;
             margin: 0 -20px;
-            
             @include md-up() {
                 margin: initial;
                 text-align: left;
@@ -198,7 +201,7 @@ $details-bg: #ececec;
             }
             
             &.selected, &:hover {
-                background: $details-bg;
+                background: $about-bg;
                 & a { color: #32338e; }
             }
             
@@ -211,37 +214,35 @@ $details-bg: #ececec;
     }
 }
 
-.details-section {
+.about-section {
     min-height: 200px;
     padding: 35px 0;
-    background-color: $details-bg;
+    background-color: $about-bg;
     color: #555;
     text-align: center;
-
-    &:not(#destaques) {
-        display: none;
-    }
-    
     @include md-up() {
         text-align: left;
     }
 
-    .details-content {
+    &:not(#destaques) {
+        display: none;
+    }
+
+    .highlights {
         align-items: center;
     }
 
     h2 {
-        margin: 0;
+        margin: 0 0 20px;
         color: #32338e;
-        font-size: 1.75rem;
-        font-weight: 400;
-
+        font-size: 1.5rem;
+        font-weight: 300;
         @include md-up() {
-            font-size: 2.25rem;
+            margin-right: 25px;
+            font-size: 1.75rem;
         }
-
         @include lg-up() {
-            font-size: 2.75rem;
+            font-size: 2.25rem;
         }
     }
 
@@ -276,6 +277,7 @@ $details-bg: #ececec;
 .advantages-section {
     min-height: 200px;
     background: #F53A5C;
+    color: #fff;
 }
 
 .page-footer {

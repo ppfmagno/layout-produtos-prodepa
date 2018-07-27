@@ -5,14 +5,26 @@ a {
   text-decoration: none;
   transition: color .2s; }
 
+h2 {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+  font-weight: 300; }
+  @media print, screen and (min-width: 40em) {
+    h2 {
+      margin-right: 25px;
+      font-size: 1.75rem; } }
+  @media print, screen and (min-width: 64em) {
+    h2 {
+      font-size: 2.25rem; } }
+
 .button {
   display: inline-block;
   margin: 10px 0;
-  padding: 5px 15px;
+  padding: 7px 20px;
   background: #01DEBC;
   color: #32338e;
   font-weight: 700;
-  font-size: .85rem;
+  font-size: .875rem;
   line-height: 1.5;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px; }
@@ -112,10 +124,14 @@ a {
     margin: 15px 0;
     font-weight: 300;
     font-style: italic;
-    font-size: 2.75rem;
+    font-size: 2rem;
     line-height: 3.25rem;
     color: #fff; }
     @media print, screen and (min-width: 40em) {
+      .hero h1 {
+        font-size: 2.75rem;
+        line-height: 3.25rem; } }
+    @media print, screen and (min-width: 64em) {
       .hero h1 {
         font-size: 3.75rem;
         line-height: 4.25rem; } }
@@ -123,8 +139,8 @@ a {
     margin: 0 auto;
     overflow: hidden;
     border-radius: 50%;
-    max-width: 175px;
-    max-height: 175px;
+    max-width: 150px;
+    max-height: 150px;
     border: 7px solid #10116c; }
     @media print, screen and (min-width: 40em) {
       .hero .hero-orb {
@@ -174,19 +190,7 @@ a {
   .about-section .highlights {
     align-items: center; }
   .about-section h2 {
-    margin: 0 0 20px;
-    color: #32338e;
-    font-size: 1.5rem;
-    font-weight: 300; }
-    @media print, screen and (min-width: 40em) {
-      .about-section h2 {
-        margin-right: 25px;
-        font-size: 1.75rem; } }
-    @media print, screen and (min-width: 64em) {
-      .about-section h2 {
-        font-size: 2.25rem; } }
-  .about-section .product-icon {
-    text-align: center; }
+    color: #32338e; }
   .about-section ul {
     padding: 0;
     list-style-position: inside; }
@@ -208,8 +212,21 @@ a {
 
 .advantages-section {
   min-height: 200px;
+  padding: 35px 0;
   background: #F53A5C;
-  color: #fff; }
+  color: #fff;
+  text-align: center; }
+  @media print, screen and (min-width: 40em) {
+    .advantages-section {
+      text-align: left; } }
+  .advantages-section > div > div {
+    align-items: center; }
+  .advantages-section h2 {
+    color: #fedd55; }
+  .advantages-section .product-icon {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center; }
 
 .page-footer {
   background: #cecece;

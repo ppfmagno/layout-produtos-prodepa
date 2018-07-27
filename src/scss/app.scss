@@ -19,14 +19,27 @@ a {
     transition: color .2s;
 }
 
+h2 {
+    margin: 0 0 20px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    @include md-up() {
+        margin-right: 25px;
+        font-size: 1.75rem;
+    }
+    @include lg-up() {
+        font-size: 2.25rem;
+    }
+}
+
 .button {
     display: inline-block;
     margin: 10px 0;
-    padding: 5px 15px;
+    padding: 7px 20px;
     background: #01DEBC;
     color: #32338e;
     font-weight: 700;
-    font-size: .85rem; 
+    font-size: .875rem; 
     line-height: 1.5;
     border-radius: 5px;
     box-shadow: rgba(0,0,0,.25) 0 0 10px;
@@ -150,10 +163,14 @@ a {
         margin: 15px 0;
         font-weight: 300;
         font-style: italic;
-        font-size: 2.75rem;
+        font-size: 2rem;
         line-height: 3.25rem;
         color: #fff;
         @include md-up() {
+            font-size: 2.75rem;
+            line-height: 3.25rem;
+        }
+        @include lg-up() {
             font-size: 3.75rem;
             line-height: 4.25rem;
         }
@@ -163,8 +180,8 @@ a {
         margin: 0 auto;
         overflow: hidden;
         border-radius: 50%;
-        max-width: 175px;
-        max-height: 175px;
+        max-width: 150px;
+        max-height: 150px;
         border: 7px solid #32338e - #222;
         @include md-up() {
             max-width: 200px;
@@ -233,21 +250,7 @@ $about-bg: #ececec;
     }
 
     h2 {
-        margin: 0 0 20px;
         color: #32338e;
-        font-size: 1.5rem;
-        font-weight: 300;
-        @include md-up() {
-            margin-right: 25px;
-            font-size: 1.75rem;
-        }
-        @include lg-up() {
-            font-size: 2.25rem;
-        }
-    }
-
-    .product-icon {
-        text-align: center;
     }
 
     ul {
@@ -276,8 +279,27 @@ $about-bg: #ececec;
 
 .advantages-section {
     min-height: 200px;
+    padding: 35px 0;
     background: #F53A5C;
     color: #fff;
+    text-align: center;
+    @include md-up() {
+        text-align: left;
+    }
+
+    & > div > div {
+        align-items: center;
+    }
+
+    h2 {
+        color: #fedd55;
+    }
+
+    .product-icon {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
 }
 
 .page-footer {

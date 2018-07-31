@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
+
 <header>
     <nav class="grid-x top-nav">
         <div class="cell small-10 medium-5 large-3">
@@ -28,31 +29,28 @@
         </div>
     </nav>
 </header>
-
-    <section class="hero">
-        <div class="grid-container">
-            <div class="grid-x hero-content">
-                <div class="cell medium-3">
-                    <div class="hero-orb">
-                        <img src="./img/datacenter-hero-orb.jpg" alt="data center">
-                    </div>
+<section class="hero">
+    <div class="grid-container">
+        <div class="grid-x hero-content">
+            <div class="cell medium-3">
+                <div class="hero-orb">
+                    <img src="./img/datacenter-hero-orb.jpg" alt="data center">
                 </div>
-                <div class="cell medium-auto">
-                    <div class="hero-text">
-                        <h1>Processo<br>Administrativo<br>Eletrônico</h1>
-                        <a href="#!" class="button">Contrate agora!</a>
-                    </div>
+            </div>
+            <div class="cell medium-auto">
+                <div class="hero-text">
+                    <h1>Processo<br>Administrativo<br>Eletrônico</h1>
+                    <a href="#!" class="button">Contrate agora!</a>
                 </div>
             </div>
         </div>
-    </section>
-
-
+    </div>
+</section>
 <nav class="about-nav">
     <div class="grid-container">
         <ul>
             <li class="selected"><a href="#destaques">destaques</a></li>
-            <li><a href="#detalhes">detalhes</a></li>
+            <li><a href="#detalhes">saiba mais</a></li>
             <li><a href="#precos">preços</a></li>
             <li><a href="#contrate">contrate</a></li>
         </ul>
@@ -60,8 +58,35 @@
 </nav>
 <section id="destaques" class="about-section">
     <div class="grid-container">
-        <div class="highlights grid-x">
-            
+        <!-- <div class="features grid-x">
+            <div class="cell medium-4 feature-item">
+                <img src="img/no-paper.png" alt="Redução do uso de papel">
+                <h3>Redução do uso de papel</h>
+            </div>
+            <div class="cell medium-4 feature-item">
+                <img src="img/connection.png" alt="Encurtamento de distâncias">
+                <h3>Melhor integração entre os municípios</h3>
+            </div>
+            <div class="cell medium-4 feature-item">
+                <img src="img/info.png" alt="Informação confiável">
+                <h3>Informação precisa e em tempo real</h3>
+            </div>
+        </div> -->
+        <div class="grid-x highlight">
+            <div class="cell medium-7 highlight-text">
+                <h2>Para muitos órgãos o PAE já é uma realidade</h1>
+                <p>Nossa vida está digitalizada, fotos, informações, voz, vídeos e áudios e agora chegou a vez dos documentos.</p>
+            </div>
+            <div class="cell medium-5">
+                <img src="img/pae-highlight.png" alt="Menos papel">
+                <!-- <div class="product-icon">
+                    <span class="fa-layers fa-7x fa-fw">
+                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-file-alt" data-fa-transform="shrink-10 up-1 left-3"></i>
+                        <i class="fas fa-file-invoice" data-fa-transform="shrink-10 up-2 right-3"></i>
+                    </span>
+                </div> -->
+            </div>
         </div>
     </div>
 </section>
@@ -118,26 +143,47 @@
 </section>
 <section class="advantages-section">
     <div class="grid-container">
-        <div class="grid-x">
-            <div class="cell medium-8">
-                <h2>Para muitos órgãos o PAE já é uma realidade</h1>
-                <p>Nossa vida está digitalizada, fotos, informações, voz, vídeos e áudios e agora chegou a vez dos documentos.</p>
-            </div>
-            <div class="cell medium-4">
-                <div class="product-icon">
-                    <span class="fa-layers fa-7x fa-fw">
-                        <i class="fas fa-desktop"></i>
-                        <i class="fas fa-file-alt" data-fa-transform="shrink-10 up-1 left-3"></i>
-                        <i class="fas fa-file-invoice" data-fa-transform="shrink-10 up-2 right-3"></i>
-                    </span>
+        
+        <div class="features grid-x">
+            <div class="cell medium-4 feature-item">
+                <div class="feature-image">
+                    <img src="img/no-paper.png" alt="Redução do uso de papel">
                 </div>
+                <h3>Redução do uso de papel</h>
+            </div>
+            <div class="cell medium-4 feature-item">
+                <div class="feature-image">
+                    <img src="img/connection.png" alt="Encurtamento de distâncias">
+                </div>
+                <h3>Melhor integração entre os municípios</h3>
+            </div>
+            <div class="cell medium-4 feature-item">
+                <div class="feature-image">
+                    <img src="img/info.png" alt="Informação confiável">
+                </div>
+                <h3>Informação precisa e em tempo real</h3>
             </div>
         </div>
     </div>
 </section>
 
     <footer class="page-footer">
-
+      <div class="grid-container">
+        <div class="grid-x">
+          <div class="medium-3">
+              <img src="http://prodepa.gov.br/sites/default/files/logo_0.png" alt="Início" class="img-responsive" style="height: 75px; filter: hue-rotate(30deg) saturate(100%) brightness(0.4);">          </div>
+          <div class="medium-3">
+            <ul>
+              <li><a href="#">Menu 1</a></li>
+              <li><a href="#">Menu 2</a></li>
+              <li><a href="#">Menu 3</a></li>
+              <li><a href="#">Menu 4</a></li>
+            </ul>
+          </div>
+          <div class="medium-3"></div>
+          <div class="medium-3"></div>
+        </div>
+      </div>
     </footer>
     
     <script src="js/vendor/jquery.js"></script>

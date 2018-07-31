@@ -42,14 +42,15 @@ function templates() {
             title = file.path.replace( /^.*\/(\w+)\..*$/, "$1" );
             return stream.pipe(ejs({title:title}, {}, { ext: '.html' }));
         }))
-        .pipe(gulp.dest(paths.templates.dest));
+        .pipe(gulp.dest(paths.templates.dest))
+        .pipe(browserSync.stream());
 }
 
 function images() {
     return gulp.src(paths.images.src)
         .pipe(imagemin())
         .pipe(gulp.dest(paths.images.dest))
-        .pipe(browserSync.stream());;
+        .pipe(browserSync.stream());
 }
 
 function styles() {

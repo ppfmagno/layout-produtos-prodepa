@@ -17,6 +17,17 @@ h2 {
     h2 {
       font-size: 2.25rem; } }
 
+h3 {
+  margin: 0 0 20px;
+  font-size: 1rem; }
+  @media print, screen and (min-width: 40em) {
+    h3 {
+      margin-right: 25px;
+      font-size: 1.125rem; } }
+  @media print, screen and (min-width: 64em) {
+    h3 {
+      font-size: 1.25rem; } }
+
 .button {
   display: inline-block;
   margin: 10px 0;
@@ -27,7 +38,8 @@ h2 {
   font-size: .875rem;
   line-height: 1.5;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px; }
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  transition: box-shadow .2s; }
   .button:hover {
     background: #12efcd;
     box-shadow: rgba(0, 0, 0, 0.25) 0 0 25px; }
@@ -35,7 +47,7 @@ h2 {
     background: #00cdab;
     box-shadow: rgba(0, 0, 0, 0.25) 0 0 5px; }
   .button:focus {
-    box-shadow: rgba(1, 222, 188, 0.25) 0 0 0 3.5px;
+    box-shadow: rgba(1, 222, 188, 0.35) 0 0 0 4px;
     outline: none; }
     .button:focus:active {
       box-shadow: rgba(0, 0, 0, 0.25) 0 0 5px; }
@@ -187,9 +199,7 @@ h2 {
       text-align: left; } }
   .about-section:not(#destaques) {
     display: none; }
-  .about-section .highlights {
-    align-items: center; }
-  .about-section h2 {
+  .about-section h2, .about-section h3 {
     color: #32338e; }
   .about-section ul {
     padding: 0;
@@ -210,23 +220,41 @@ h2 {
       outline: none;
       box-shadow: rgba(50, 51, 142, 0.25) 0 0 0 3.5px; }
 
+.highlight {
+  align-items: flex-end; }
+  .highlight .highlight-text {
+    padding-right: 20px; }
+  .highlight img {
+    margin-bottom: -35px; }
+
+.features {
+  padding: 15px 0; }
+  .features .feature-item {
+    text-align: center;
+    margin: 20px 0; }
+    .features .feature-item .feature-image {
+      max-width: 150px;
+      margin: 20px auto;
+      border: 5px solid #fedd55;
+      border-radius: 50%;
+      padding: 15px; }
+    .features .feature-item img {
+      text-align: center; }
+    .features .feature-item h3 {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+      max-width: 65%; }
+
 .advantages-section {
-  min-height: 200px;
-  padding: 35px 0;
   background: #F53A5C;
   color: #fff;
   text-align: center; }
   @media print, screen and (min-width: 40em) {
     .advantages-section {
       text-align: left; } }
-  .advantages-section > div > div {
-    align-items: center; }
-  .advantages-section h2 {
-    color: #fedd55; }
-  .advantages-section .product-icon {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center; }
+  .advantages-section h3 {
+    font-weight: 300; }
 
 .page-footer {
   background: #cecece;

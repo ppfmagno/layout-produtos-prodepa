@@ -32,6 +32,19 @@ h2 {
     }
 }
 
+h3 {
+    margin: 0 0 20px;
+    font-size: 1rem;
+    // font-weight: 300;
+    @include md-up() {
+        margin-right: 25px;
+        font-size: 1.125rem;
+    }
+    @include lg-up() {
+        font-size: 1.25rem;
+    }
+}
+
 .button {
     display: inline-block;
     margin: 10px 0;
@@ -43,6 +56,7 @@ h2 {
     line-height: 1.5;
     border-radius: 5px;
     box-shadow: rgba(0,0,0,.25) 0 0 10px;
+    transition: box-shadow .2s;
     &:hover {
         background: #01DEBC + #111;
         box-shadow: rgba(0,0,0,.25) 0 0 25px;
@@ -52,7 +66,7 @@ h2 {
         box-shadow: rgba(0,0,0,.25) 0 0 5px;
     }
     &:focus {
-        box-shadow: transparentize($color: #01DEBC, $amount: .75) 0 0 0 3.5px;
+        box-shadow: transparentize($color: #01DEBC, $amount: .65) 0 0 0 4px;
         outline: none;
         &:active {
             box-shadow: rgba(0,0,0,.25) 0 0 5px;
@@ -245,11 +259,7 @@ $about-bg: #ececec;
         display: none;
     }
 
-    .highlights {
-        align-items: center;
-    }
-
-    h2 {
+    h2, h3 {
         color: #32338e;
     }
 
@@ -277,9 +287,47 @@ $about-bg: #ececec;
     }
 }
 
+.highlight {
+    align-items: flex-end;
+
+    .highlight-text {
+        padding-right: 20px;
+    }
+
+    img {
+        margin-bottom: -35px;
+    }
+}
+
+.features {
+    padding: 15px 0;
+
+    .feature-item {
+        text-align: center;
+        margin: 20px 0;
+
+        .feature-image {
+            max-width: 150px;
+            margin: 20px auto;
+            border: 5px solid #fedd55;
+            border-radius: 50%;
+            padding: 15px
+        }
+
+        img {
+            text-align: center;
+        }
+        
+        h3 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+            max-width: 65%;
+        }
+    }
+}
+
 .advantages-section {
-    min-height: 200px;
-    padding: 35px 0;
     background: #F53A5C;
     color: #fff;
     text-align: center;
@@ -287,18 +335,8 @@ $about-bg: #ececec;
         text-align: left;
     }
 
-    & > div > div {
-        align-items: center;
-    }
-
-    h2 {
-        color: #fedd55;
-    }
-
-    .product-icon {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        text-align: center;
+    h3 {
+        font-weight: 300;
     }
 }
 

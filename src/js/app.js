@@ -1,5 +1,6 @@
 $(document).foundation();
 
+// responsive menu
 let menuIcon = $('.top-nav .menu-icon');
 menuIcon.click( () => {
     let menu = $('.top-nav ul'),
@@ -17,6 +18,7 @@ menuIcon.click( () => {
     }
 });
 
+// details navigation
 let detailsNav = $('.about-nav a');
 detailsNav.click( (e) => {
     e.preventDefault();
@@ -43,3 +45,13 @@ detailsNav.click( (e) => {
     });
         
 });
+
+// details div equalizer
+let resizeTime;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTime);
+    resizeTime = setTimeout(equilize, 500);
+});
+function equilize() {
+    console.log('equilized');
+}

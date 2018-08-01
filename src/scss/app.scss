@@ -307,17 +307,14 @@ $about-bg: #ececec;
         margin: 20px 0;
 
         .feature-image {
-            max-width: 150px;
+            max-width: 125px;
+            max-height: 125px;
             margin: 20px auto;
             border: 5px solid #fedd55;
             border-radius: 50%;
             padding: 15px
         }
 
-        img {
-            text-align: center;
-        }
-        
         h3 {
             margin-left: auto;
             margin-right: auto;
@@ -342,5 +339,41 @@ $about-bg: #ececec;
 
 .page-footer {
     background: #cecece;
+    color: #555;
     min-height: 75px;
+    font-size: .825rem;
+
+    .logo-prodepa img {
+        height: 60px;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin: 5px 0;
+        }
+    }
+    
+    a {
+        color: #555;
+        &:hover {
+            color: #32338e;
+        }
+    }
+}
+
+.page-footer-grid {
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+
+    & > div {
+        margin: 10px 0;
+    }
+    @include md-up() {
+        text-align: left;
+    }
 }

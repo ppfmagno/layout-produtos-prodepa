@@ -28,6 +28,16 @@ h3 {
     h3 {
       font-size: 1.25rem; } }
 
+h4 {
+  margin: 0 0 20px;
+  font-size: 0.825rem; }
+  @media print, screen and (min-width: 40em) {
+    h4 {
+      margin-right: 25px; } }
+  @media print, screen and (min-width: 64em) {
+    h4 {
+      font-size: 1rem; } }
+
 .button {
   display: inline-block;
   margin: 10px 0;
@@ -121,7 +131,7 @@ h3 {
             padding-right: 10px; } }
 
 .hero {
-  background: #32338e url("../img/datacenter-bg.jpg") center right/cover;
+  background: #32338e url("../img/pae-bg.jpg") center right/cover;
   text-align: center; }
   @media print, screen and (min-width: 40em) {
     .hero {
@@ -196,17 +206,37 @@ h3 {
   text-align: center; }
   @media print, screen and (min-width: 40em) {
     .about-section {
-      text-align: left; } }
+      text-align: left; }
+      .about-section p {
+        margin-right: 15px; } }
   .about-section:not(#destaques) {
     display: none; }
-  .about-section h2, .about-section h3 {
+  .about-section h2, .about-section h3, .about-section h4 {
     color: #32338e; }
   .about-section ul {
     padding: 0;
     list-style-position: inside; }
+  .about-section .detalhes-item {
+    margin-bottom: 35px; }
     @media print, screen and (min-width: 40em) {
-      .about-section ul {
-        columns: 2; } }
+      .about-section .detalhes-item {
+        margin-right: 20px; } }
+    .about-section .detalhes-item .detalhes-icon {
+      font-size: 2rem;
+      margin-bottom: 5px; }
+      @media print, screen and (min-width: 40em) {
+        .about-section .detalhes-item .detalhes-icon {
+          font-size: 1.25rem;
+          float: left;
+          margin: 0 15px 10px 0; } }
+      @media print, screen and (min-width: 64em) {
+        .about-section .detalhes-item .detalhes-icon {
+          font-size: 2rem; } }
+    .about-section .detalhes-item h4 {
+      margin-bottom: 10px; }
+    .about-section .detalhes-item p {
+      margin: 10px 0;
+      clear: both; }
   .about-section input, .about-section textarea {
     border-radius: 5px;
     border: none;
@@ -272,6 +302,10 @@ h3 {
     color: #555; }
     .page-footer a:hover {
       color: #32338e; }
+
+.numbers {
+  min-height: 200px;
+  background: url("../img/test.jpg") center/cover no-repeat; }
 
 .page-footer-grid {
   align-items: center;

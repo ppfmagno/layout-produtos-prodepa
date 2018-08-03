@@ -24,7 +24,6 @@ h2 {
     font-size: 1.5rem;
     font-weight: 300;
     @include md-up() {
-        margin-right: 25px;
         font-size: 1.75rem;
     }
     @include lg-up() {
@@ -36,7 +35,6 @@ h3 {
     margin: 0 0 20px;
     font-size: 1rem;
     @include md-up() {
-        margin-right: 25px;
         font-size: 1.125rem;
     }
     @include lg-up() {
@@ -47,9 +45,6 @@ h3 {
 h4 {
     margin: 0 0 20px;
     font-size: 0.825rem;
-    @include md-up() {
-        margin-right: 25px;
-    }
     @include lg-up() {
         font-size: 1rem;
     }
@@ -169,7 +164,7 @@ h4 {
 }
 
 .hero {
-    background: #32338e url('../img/pae-bg.jpg') center right / cover;
+    background: #32338e url('../img/pae-bg.jpg') fixed center right / cover;
     text-align: center;
     @include md-up(){
         text-align: left;
@@ -275,6 +270,9 @@ $about-bg: #ececec;
 
     h2, h3, h4 {
         color: #32338e;
+        @include md-up() {
+            margin-right: 25px;
+        }
     }
 
     ul {
@@ -318,7 +316,7 @@ $about-bg: #ececec;
         border-radius: 5px;
         border: none;
         margin: 7.5px 0 10px;
-        padding: 5px;
+        padding: 5px 7px;
         resize: vertical;
         display: block;
         width: 100%;
@@ -367,6 +365,78 @@ $about-bg: #ececec;
     }
 }
 
+.price-table {
+    justify-content: center;
+}
+
+.price-card {
+    position: relative;
+    overflow: hidden;
+    background-color: #cecece;
+    margin-bottom: 30px;
+    padding: 0 0 15px;
+    text-align: center;
+    transition: all .1s;
+    @include md-up() {
+        margin: 0 10px;
+    }
+    @include lg-up() {
+        margin: 0 25px;
+    }
+
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: #cecece 0 0 25px 0;
+    }
+
+    .price-advice {
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        top: 20px;
+        right: -30px;
+        transform: rotate(45deg);
+        padding: 1px 40px;
+        background: #F53A5C;
+        color: #fff;
+        font-weight: 700;
+    }
+    
+    h3 {
+        margin: 0 0 15px;
+        padding: 5px 0;
+        font-size: 1.1rem;
+        background-color: #32338e;
+        color: #fff;
+    }
+
+    h4 {
+        margin: 0;
+        font-weight: 300;
+        .price {
+            font-size: 3rem;
+        }
+    }
+
+    span {
+        font-size: .85rem;
+    }
+
+    ul {
+        padding: 0;
+        margin: 15px 3px;
+        list-style: none;
+        background-color: #ececec;
+
+        li {
+            padding: 12px 0;
+            border-top: 3px solid #cecece;
+            &:first-child {
+                border: none;
+            }
+        }
+    }
+}
+
 .advantages-section {
     background: #F53A5C;
     color: #fff;
@@ -377,6 +447,23 @@ $about-bg: #ececec;
 
     h3 {
         font-weight: 300;
+    }
+}
+
+.cases {
+    background: url('../img/cases-bg.jpg') fixed center / cover no-repeat;
+    min-height: 100px;
+    padding: 50px 0;
+    color: #32338e;
+    text-align: center;
+
+    h2 {
+        margin: 0;
+    }
+
+    .big-number {
+        font-size: 2em;
+        font-weight: 700;
     }
 }
 
@@ -406,11 +493,6 @@ $about-bg: #ececec;
             color: #32338e;
         }
     }
-}
-
-.numbers {
-    min-height: 200px;
-    background: url('../img/test.jpg') center / cover no-repeat;
 }
 
 .page-footer-grid {

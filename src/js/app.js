@@ -45,13 +45,3 @@ detailsNav.click( (e) => {
     });
         
 });
-
-// details div equalizer
-let resizeTime;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTime);
-    resizeTime = setTimeout(equilize, 500);
-});
-function equilize() {
-    console.log('equilized');
-}

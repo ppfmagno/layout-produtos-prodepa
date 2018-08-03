@@ -80,15 +80,33 @@
 </section>
 <section id="precos" class="about-section">
     <div class="grid-container">
-        <div class="grid-x">
-            <div class="cell medium-4">
-                <h3>Básico</h3>
-                <h4>R$ 40,50</h4>
-                <ul>
-                    <li>Característica 1</li>
-                    <li>Característica 2</li>
-                    <li>Característica 3</li>
-                </ul>
+        <div class="grid-x price-table">
+            <div class="cell small-10 medium-4">
+                <div class="price-card">
+                    <h3>Básico</h3>
+                    <h4>R$ <span class="price">40,50</span></h4>
+                    <span>mensal</span>
+                    <ul>
+                        <li>Ofícios e memorando</li>
+                        <li>Distribua tarefas</li>
+                        <li>Crie modelos</li>
+                    </ul>
+                    <a href="#" class="button">Contratar</a>
+                </div>
+            </div>
+            <div class="cell small-10 medium-4">
+                <div class="price-card">
+                    <span class="price-advice">oferta!</span>
+                    <h3>Premium</h3>
+                    <h4>R$ <span class="price">50,50</span></h4>
+                    <span>mensal</span>
+                    <ul>
+                        <li>Ofícios e memorando</li>
+                        <li>Distribua tarefas</li>
+                        <li>Crie modelos</li>
+                    </ul>
+                    <a href="#" class="button">Contratar</a>
+                </div>
             </div>
         </div>
     </div>
@@ -116,7 +134,7 @@
                     </div>
                     <div>
                         <label for="">Mensagem *</label>
-                        <textarea name="contratar[mensagem]" id=""></textarea>
+                        <textarea name="contratar[mensagem]" id="" rows="5"></textarea>
                     </div>
                     <input type="hidden" name="contratar[produto]" value="produto_id">
                     <button class="button">Enviar</button>

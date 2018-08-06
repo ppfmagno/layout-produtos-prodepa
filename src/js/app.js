@@ -19,12 +19,25 @@ menuIcon.click( () => {
 });
 
 // details navigation
-let detailsNav = $('.about-nav a');
-detailsNav.click( (e) => {
+let detailsNav = $('.about-nav a'),
+    buttonContratar = $('a[href="#contrate"]');
+
+detailsNav.click(navigateDetails);
+buttonContratar.click(navigateDetails);
+
+function navigateDetails(e) {
     e.preventDefault();
-    let href = $(e.target).attr('href'),
+    let target = $(e.target),
+        href = target.attr('href'),
         tabId = href.substr(1),
-        tabs = $('section.about-section');
+        tabs = $('section.about-section'),
+        tabTop = detailsNav.position().top;
+        
+        console.log(target.parents(tabs));
+        
+    if (!target.parents('section.about-section').length && !target.parents('.about-nav').length) {
+        window.scrollTo(0, tabTop);
+    }
         
     tabs.each(function() {            
         if ($(this).attr('id') == tabId) {
@@ -42,6 +55,5 @@ detailsNav.click( (e) => {
         } else {
             $(this).parent().removeClass('selected');
         }
-    });
-        
-});
+    });       
+}

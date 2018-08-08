@@ -61,13 +61,13 @@ h4 {
   background: #ececec;
   display: flex;
   align-items: center; }
+  .top-nav img {
+    height: 35px;
+    margin-right: 10px; }
   .top-nav h1 {
     margin: 0;
     font-weight: 400;
     font-size: 1.5rem; }
-    .top-nav h1 em {
-      font-weight: 700 !important;
-      font-style: normal; }
   .top-nav a {
     display: block;
     padding: 7.5px 20px;
@@ -204,12 +204,12 @@ h4 {
       text-align: left; }
       .about-section p {
         margin-right: 15px; } }
-  .about-section:not(#destaques) {
+  .about-section:not(#descricao) {
     display: none; }
-  .about-section h2, .about-section h3, .about-section h4 {
+  .about-section h2, .about-section h3 {
     color: #32338e; }
     @media print, screen and (min-width: 40em) {
-      .about-section h2, .about-section h3, .about-section h4 {
+      .about-section h2, .about-section h3 {
         margin-right: 25px; } }
   .about-section ul {
     padding: 0;
@@ -220,6 +220,7 @@ h4 {
       .about-section .detalhes-item {
         margin-right: 20px; } }
     .about-section .detalhes-item .detalhes-icon {
+      color: #32338e;
       font-size: 2rem;
       margin-bottom: 5px; }
       @media print, screen and (min-width: 40em) {
@@ -235,18 +236,6 @@ h4 {
     .about-section .detalhes-item p {
       margin: 10px 0;
       clear: both; }
-  .about-section input, .about-section textarea {
-    border-radius: 5px;
-    border: none;
-    margin: 7.5px 0 10px;
-    padding: 5px 7px;
-    resize: vertical;
-    display: block;
-    width: 100%;
-    transition: box-shadow .2s; }
-    .about-section input:focus, .about-section textarea:focus {
-      outline: none;
-      box-shadow: rgba(50, 51, 142, 0.25) 0 0 0 3.5px; }
 
 .highlight {
   align-items: flex-end; }
@@ -259,19 +248,27 @@ h4 {
   padding: 15px 0; }
   .features .feature-item {
     text-align: center;
-    margin: 20px 0; }
+    margin: 10px 0; }
+    @media print, screen and (min-width: 40em) {
+      .features .feature-item {
+        margin: 15px 0; } }
     .features .feature-item .feature-image {
-      max-width: 125px;
-      max-height: 125px;
-      margin: 20px auto;
+      max-width: 105px;
+      max-height: 105px;
+      margin: 10px auto;
       border: 5px solid #fedd55;
       border-radius: 50%;
       padding: 15px; }
+      @media print, screen and (min-width: 40em) {
+        .features .feature-item .feature-image {
+          max-width: 125px;
+          max-height: 125px; } }
     .features .feature-item h3 {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 0;
-      max-width: 65%; }
+      max-width: 65%;
+      color: #555; }
 
 .price-table {
   justify-content: center; }
@@ -341,13 +338,50 @@ h4 {
   background: url("../img/cases-bg.jpg") fixed center/cover no-repeat;
   min-height: 100px;
   padding: 50px 0;
-  color: #32338e;
   text-align: center; }
-  .cases h2 {
+  .cases h2, .cases p {
+    color: #32338e;
     margin: 0; }
   .cases .big-number {
     font-size: 2em;
     font-weight: 700; }
+
+.contato {
+  min-height: 200px;
+  padding: 35px 0;
+  background-color: #ececec;
+  color: #555; }
+  .contato .contato-grid {
+    justify-content: center; }
+  .contato h2 {
+    color: #32338e; }
+  .contato h2, .contato p {
+    margin: 0;
+    text-align: center; }
+  .contato form {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; }
+  .contato .form-field {
+    padding: 0 5px;
+    width: 100%; }
+    @media print, screen and (min-width: 40em) {
+      .contato .form-field.half {
+        width: 50%; } }
+    .contato .form-field button {
+      width: 100%; }
+  .contato input, .contato textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    margin: 7.5px 0 10px;
+    padding: 5px 7px;
+    resize: vertical;
+    display: block;
+    transition: box-shadow .2s; }
+    .contato input:focus, .contato textarea:focus {
+      outline: none;
+      box-shadow: rgba(50, 51, 142, 0.25) 0 0 0 3.5px; }
 
 .page-footer {
   background: #cecece;

@@ -16,7 +16,7 @@ body {
 
 a {
     text-decoration: none;
-    transition: color .2s;
+    transition: color .2s, background .2s;
 }
 
 h2 {
@@ -61,7 +61,7 @@ h4 {
     line-height: 1.5;
     border-radius: 5px;
     box-shadow: rgba(0,0,0,.25) 0 0 10px;
-    transition: box-shadow .2s;
+    transition: box-shadow .2s, background .1s;
     &:hover {
         background: #01DEBC + #111;
         box-shadow: rgba(0,0,0,.25) 0 0 25px;
@@ -163,14 +163,68 @@ h4 {
     }
 }
 
-.hero {
+.search-bar {
+    background: #32338e;
+    // padding: 15px 0;
+
+    .search-container {
+        justify-content: center;
+    }
+
+    input {
+        background: rgba(255,255,255,.5);
+        border: none;
+        margin: 5px 0;
+        padding: 15px 10px;
+        width: 100%;
+        transition: background .1s;
+        &:focus {
+            background: #ececec;
+            outline: none;
+        }
+    }
+}
+
+.services {
+    background: #ececec;
+    padding-bottom: 100px;
+
+    .services-item {
+        min-height: 150px;
+        margin: 90px 10px -20px;
+        padding: 10px;
+        background-color: #cecece;
+        text-align: center;
+        border-top: 15px solid #32338e; 
+
+        img {
+            max-width: 55%;
+            margin-top: -65px;
+            border-radius: 100%;
+            border: 7px solid #32338e; 
+            text-align: center;
+        }
+
+        h2 {
+            margin: 15px 0 0;
+            color: #32338e;
+            font-size: 1.25em;
+        }
+
+        p {
+            font-size: .825em;
+        }
+    }
+}
+
+.product-hero {
     background: #32338e url('../img/pae-bg.jpg') fixed center right / cover;
     text-align: center;
     @include md-up(){
         text-align: left;
     }
     
-    .hero-content {
+    .product-hero-content {
         padding-top: 20px; 
         padding-bottom: 20px; 
         min-height: 300px;
@@ -195,7 +249,7 @@ h4 {
         }
     }
 
-    .hero-orb {
+    .product-hero-orb {
         margin: 0 auto;
         overflow: hidden;
         border-radius: 50%;
@@ -208,7 +262,7 @@ h4 {
         }
     }
     @include md-up() {
-        .hero-text {
+        .product-hero-text {
             margin-left: 30px;
         }
     }
@@ -230,6 +284,7 @@ $about-bg: #ececec;
             background: transparent;
             text-align: center;
             margin: 0 -20px;
+            transition: background .1s;
             @include md-up() {
                 margin: initial;
                 text-align: left;
@@ -319,10 +374,6 @@ $about-bg: #ececec;
 
     .highlight-text {
         padding-right: 20px;
-    }
-
-    img {
-        margin-bottom: -35px;
     }
 }
 
@@ -512,9 +563,6 @@ $about-bg: #ececec;
             outline: none;
             box-shadow: transparentize(#32338e, .75) 0 0 0 3.5px;
         }
-    }
-
-    input {
     }
 }
 

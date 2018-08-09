@@ -1,39 +1,8 @@
 <% include partials/header %>
 
-<% include partials/top-nav %>
-<% include partials/hero %>
-<% include partials/about-section %>
-<% include partials/cases %>
-<!-- <% include partials/advantages-section %> -->
-<section id="contrate" class="contato">
-    <div class="grid-container">
-        <div class="grid-x contato-grid">
-            <div class="cell medium-8">
-                <h2>Ficou interessado?</h2>
-                <p>Envie seus dados e entraremos em contato.</p>
-            </div>
-            <div class="cell medium-8">
-                <form action="">
-                    <div class="form-field half">
-                        <label for="">Nome *</label>
-                        <input type="text" name="contratar[nome]" id="">
-                    </div>
-                    <div class="form-field half">
-                        <label for="">Telefone *</label>
-                        <input type="text" name="contratar[telefone]" id="">
-                    </div>
-                    <div class="form-field">
-                        <label for="">Mensagem *</label>
-                        <textarea name="contratar[mensagem]" id="" rows="5"></textarea>
-                    </div>
-                    <input type="hidden" name="contratar[produto]" value="produto_id">
-                    <div class="form-field">
-                        <button class="button">Enviar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+<% include partials/index/index-top-nav %>
+<% include partials/index/index-hero %>
+<% include partials/index/index-search %>
+<% include partials/index/index-services %>
 
 <% include partials/footer %>

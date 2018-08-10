@@ -52,9 +52,13 @@ h4 {
     background: #00cdab;
     box-shadow: rgba(0, 0, 0, 0.25) 0 0 5px; }
   .button:focus {
-    box-shadow: rgba(1, 222, 188, 0.35) 0 0 0 4px;
+    box-shadow: rgba(50, 51, 142, 0.25) 0 0 0 4px;
     outline: none; }
     .button:focus:active {
+      box-shadow: rgba(0, 0, 0, 0.25) 0 0 5px; }
+  [class*='hero'] .button:focus {
+    box-shadow: rgba(1, 222, 188, 0.35) 0 0 0 4px; }
+    [class*='hero'] .button:focus:active {
       box-shadow: rgba(0, 0, 0, 0.25) 0 0 5px; }
 
 .top-nav {
@@ -125,24 +129,59 @@ h4 {
           .top-nav ul li:last-child {
             padding-right: 10px; } }
 
+.index-hero {
+  min-height: 150px;
+  padding: 50px 0;
+  background: url("../img/index-hero-bg.jpg") fixed center/cover;
+  color: #fff;
+  text-align: center; }
+  .index-hero h1 {
+    width: 100%;
+    margin: 15px 0;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 3.25rem;
+    color: #fff; }
+    @media print, screen and (min-width: 40em) {
+      .index-hero h1 {
+        font-size: 2.75rem;
+        line-height: 3.25rem; } }
+    @media print, screen and (min-width: 64em) {
+      .index-hero h1 {
+        font-size: 3.75rem;
+        line-height: 4.25rem; } }
+  .index-hero span {
+    display: block;
+    width: 100%; }
+
 .search-bar {
   background: #32338e; }
   .search-bar .search-container {
     justify-content: center; }
-  .search-bar input {
-    background: rgba(255, 255, 255, 0.5);
-    border: none;
-    margin: 5px 0;
-    padding: 15px 10px;
-    width: 100%;
-    transition: background .1s; }
-    .search-bar input:focus {
-      background: #ececec;
-      outline: none; }
+    .search-bar .search-container input {
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      padding: 15px 10px;
+      width: 100%;
+      transition: background .1s; }
+      .search-bar .search-container input:focus {
+        background: #ececec;
+        outline: none; }
+    .search-bar .search-container .search-form {
+      position: relative; }
+    .search-bar .search-container .search-button {
+      color: #32338e;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 15px; }
 
 .services {
   background: #ececec;
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  min-height: 300px; }
   .services .services-item {
     min-height: 150px;
     margin: 90px 10px -20px;
@@ -415,7 +454,7 @@ h4 {
     padding: 5px 7px;
     resize: vertical;
     display: block;
-    transition: box-shadow .2s; }
+    transition: box-shadow .2s ease-in-out; }
     .contato input:focus, .contato textarea:focus {
       outline: none;
       box-shadow: rgba(50, 51, 142, 0.25) 0 0 0 3.5px; }

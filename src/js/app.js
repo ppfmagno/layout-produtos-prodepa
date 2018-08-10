@@ -51,3 +51,20 @@ function navigateDetails(e) {
         }
     });       
 }
+
+// filter search on input change
+let searchInput = document.getElementById('search-service-input'),
+    services = document.querySelectorAll('.services-item-container');
+
+searchInput.addEventListener('keyup', (e) => {
+    let query = new RegExp (e.target.value, 'g');
+    services.forEach(item => {
+        console.log(item);
+        
+        if (!item.dataset.tags.match(query)) {
+            item.style.display = 'none';
+        } else {
+            item.style.display = 'block';
+        }
+    });
+});

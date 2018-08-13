@@ -54,7 +54,7 @@ function navigateDetails(e) {
 
 // filter search on input change
 let searchInput = document.getElementById('search-service-input'),
-    services = document.querySelectorAll('.services-item-container');
+services = document.querySelectorAll('.services-item-container');
 
 searchInput.addEventListener('keyup', (e) => {
     let query = new RegExp (e.target.value, 'g');
@@ -67,4 +67,15 @@ searchInput.addEventListener('keyup', (e) => {
             item.style.display = 'block';
         }
     });
+});
+
+// focus on search by clcking on #go-to-search
+let goToSearch = document.getElementById('go-to-search');
+
+goToSearch.addEventListener('click', (e) => {
+    let searchInputY = $('#search-service-input').offset().top;
+    searchInput.focus();
+    console.log(searchInputY);
+    
+    window.scrollTo(0,searchInputY);
 });

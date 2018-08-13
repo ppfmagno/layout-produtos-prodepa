@@ -170,7 +170,7 @@ h4 {
 
 .index-hero {
     min-height: 150px;
-    padding: 50px 0;
+    padding: 40px 0;
     background: url('../img/index-hero-bg.jpg') fixed center / cover;
     color: #fff;
     text-align: center;
@@ -194,6 +194,12 @@ h4 {
     span {
         display: block;
         width: 100%;
+    }
+    p {
+        width: 100%;
+    }
+    #go-to-search {
+        cursor: pointer;
     }
 }
 
@@ -254,7 +260,8 @@ h4 {
         h2 {
             margin: 15px 0 0;
             color: #32338e;
-            font-size: 1.25em;
+            font-size: 1em;
+            font-weight: 700;
         }
 
         p {
